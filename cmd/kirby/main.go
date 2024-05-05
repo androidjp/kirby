@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/androidjp/kirby/cmd/kirby/internal/proto"
+	"github.com/androidjp/kirby/cmd/kirby/internal/upgrade"
 	"github.com/spf13/cobra"
 	"log"
 )
@@ -46,6 +47,7 @@ var rootCmd = cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(proto.CmdProto)
+	rootCmd.AddCommand(upgrade.CmdUpgrade)
 }
 
 func main() {
